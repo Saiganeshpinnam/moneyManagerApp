@@ -3,8 +3,7 @@
 import './index.css'
 
 const MoneyDetails = props => {
-  const {getIncome, getExpenses} =
-    props
+  const {getIncome, getExpenses} = props
 
   // const income = transactionsList
   //   .filter(transaction => transaction.type === 'Income')
@@ -38,9 +37,7 @@ const MoneyDetails = props => {
           alt="income"
         />
         <div className="current-status-container">
-          <p className="your-status">
-           HEllo
-          </p>
+          <p className="your-status">HEllo</p>
           <p className="amount-status" data-testid="incomeAmount">
             Rs. {getIncome}
           </p>
@@ -54,9 +51,7 @@ const MoneyDetails = props => {
           alt="expenses"
         />
         <div className="current-status-container">
-          <p className="your-status">
-            Your 
-          </p>
+          <p className="your-status">Your</p>
           <p className="amount-status" data-testid="expensesAmount">
             Rs. {getExpenses}
           </p>
