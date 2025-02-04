@@ -37,7 +37,7 @@ const MoneyDetails = props => {
           alt="income"
         />
         <div className="current-status-container">
-          <p className="your-status">HEllo</p>
+          <p className="your-status">Your Income</p>
           <p className="amount-status" data-testid="incomeAmount">
             Rs. {getIncome}
           </p>
@@ -51,7 +51,7 @@ const MoneyDetails = props => {
           alt="expenses"
         />
         <div className="current-status-container">
-          <p className="your-status">Your</p>
+          <p className="your-status">Your Expenses</p>
           <p className="amount-status" data-testid="expensesAmount">
             Rs. {getExpenses}
           </p>

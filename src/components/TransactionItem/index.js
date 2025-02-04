@@ -1,5 +1,4 @@
 // Write your code here
-// Write your code here
 import './index.css'
 
 const transactionList = props => {
@@ -15,11 +14,12 @@ const transactionList = props => {
       <p>{amount}</p>
       <p>{type}</p>
 
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/money-manager/delete.png"
-        alt="delete"
-        onClick={onDeleteItem}
-      />
+      <button type="button" onClick={onDeleteItem} data-testid="delete">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/money-manager/delete.png"
+          alt="delete"
+        />
+      </button>
     </li>
   )
 }

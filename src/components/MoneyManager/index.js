@@ -27,19 +27,16 @@ class MoneyManager extends Component {
     transactionList: initialTransactionsList,
     title: '',
     amount: '',
-    type: 'Income',
+    type: 'INCOME',
   }
 
   onSubmitTransaction = event => {
     event.preventDefault()
-  }
-
-  onAddTransaction = () => {
     const {title, amount, type} = this.state
     const newTransaction = {
       id: uuidv4(),
       title,
-      amount,
+      amount: parseInt(amount),
       type,
     }
 
@@ -47,7 +44,7 @@ class MoneyManager extends Component {
       transactionList: [...prevState.transactionList, newTransaction],
       title: '',
       amount: '',
-      type: 'INCOME',
+      type: 'Income',
     }))
   }
 
@@ -100,7 +97,7 @@ class MoneyManager extends Component {
   }
 
   render() {
-    const {transactionList} = this.state
+    const {transactionList, amount, title, type} = this.state
     const getIncome = this.income()
     const getExpenses = this.expenses()
     return (
@@ -126,6 +123,7 @@ class MoneyManager extends Component {
                 id="title"
                 placeholder="TITLE"
                 onChange={this.onChangeTitle}
+                value={title}
               />
             </div>
 
@@ -137,6 +135,7 @@ class MoneyManager extends Component {
                 id="amount"
                 placeholder="AMOUNT"
                 onChange={this.onChangeAmount}
+                value={amount}
               />
             </div>
 
@@ -146,16 +145,13 @@ class MoneyManager extends Component {
                 id="type"
                 className="form-control inputElement"
                 onChange={this.onSelectType}
+                value={type}
               >
                 <option>{transactionTypeOptions[0].displayText}</option>
                 <option>{transactionTypeOptions[1].displayText}</option>
               </select>
             </div>
-            <button
-              type="submit"
-              className="add-btn"
-              onClick={this.onAddTransaction}
-            >
+            <button type="submit" className="add-btn">
               Add
             </button>
           </form>
