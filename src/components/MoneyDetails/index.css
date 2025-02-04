@@ -1,0 +1,55 @@
+/* Write your CSS here */
+/* Write your CSS here */
+
+.money-details-container {
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 7px;
+  height: 90px;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+}
+.balance-container {
+  background-color: #ecfccb;
+  border-color: #84cc16;
+}
+.income-container {
+  background-color: #cffafe;
+  border-color: #06b6d4;
+}
+.expenses-container {
+  background-color: #ede9fe;
+  border-color: #7c3aed;
+}
+.financial-icon {
+  height: 65px;
+  width: 65px;
+  border-radius: 65px;
+}
+.current-status-container {
+  margin: 20px;
+}
+.your-status {
+  color: #7e858e;
+  font-size: 14px;
+  font-family: 'Roboto';
+}
+.amount-status {
+  color: #7e858e;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .money-details-bg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

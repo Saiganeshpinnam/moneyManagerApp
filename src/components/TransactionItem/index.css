@@ -1,0 +1,9 @@
+/* Write your CSS here */
+/* Write your CSS here */
+
+.each-transaction-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
